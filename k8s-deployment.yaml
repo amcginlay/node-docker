@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-docker
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: node-docker
+  template:
+    metadata:
+      labels:
+        app: node-docker
+    spec:
+      containers:
+      - image: amcginlay/node-docker:latest
+        name: node-docker
+        ports:
+        - containerPort: 8080
+          protocol: TCP

@@ -5,4 +5,4 @@ COPY . /src
 WORKDIR /src
 RUN npm install
 EXPOSE 8080
-CMD node server.js >> /var/log/node-docker.out 2>&1
+CMD node server.js

@@ -13,8 +13,9 @@ spec:
         app: node-docker
     spec:
       containers:
-      - image: amcginlay/node-docker:latest
-        name: node-docker
+      - name: node-docker
+        image: amcginlay/node-docker:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 8080
           protocol: TCP

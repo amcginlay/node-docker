@@ -1,4 +1,4 @@
-const version = '1.0'
+const version = '1.1'
 const greeting = process.env.GREETING || 'Hello';
 const port = process.env.PORT || 8080;
 const serverstarthr = process.hrtime();

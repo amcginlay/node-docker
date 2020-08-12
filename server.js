@@ -1,3 +1,4 @@
+const version = '1.0'
 const greeting = process.env.GREETING || 'Hello';
 const port = process.env.PORT || 8080;
 const serverstarthr = process.hrtime();
@@ -11,7 +12,7 @@ require('http').createServer(function (req, res) {
     if (elapsed > workload) break;
   }
   // respond with greeting and copy to stdout
-  var result = greeting + ' from ' + require('os').hostname() + ' at ' + process.hrtime(serverstarthr);
+  var result = 'v' + version + ': ' + greeting + ' from ' + require('os').hostname() + ' at ' + process.hrtime(serverstarthr);
   console.log('> ' + result);
   res.writeHead(200, {'Content-Type': 'text/plain'});
   res.end(result + '\n');
